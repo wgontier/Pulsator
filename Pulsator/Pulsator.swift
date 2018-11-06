@@ -105,7 +105,7 @@ open class Pulsator: CAReplicatorLayer, CAAnimationDelegate {
     @objc open var pulseInterval: TimeInterval = 0
     
     /// A function describing a timing curve of the animation.
-    @objc open var timingFunction: CAMediaTimingFunction? = CAMediaTimingFunction(name: .default) {
+    @objc open var timingFunction: CAMediaTimingFunction? = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default) {
         didSet {
             if let animationGroup = animationGroup {
                 animationGroup.timingFunction = timingFunction
